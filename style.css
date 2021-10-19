@@ -1,0 +1,182 @@
+body {
+  background-color: #0f1424;
+  color: #bdc1ff;
+  margin: 15vh 10vw;
+  position: relative;
+}
+
+h1 {
+  font-size: 1rem;
+}
+
+h3 {
+  font-size: 27px;
+}
+
+main {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "card work play study" "card exercise social care";
+  -webkit-column-gap: 18px;
+          column-gap: 18px;
+  row-gap: 72px;
+}
+
+main .card {
+  background-color: #1c1f4a;
+  border-radius: 18px;
+  padding: 18px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+main .card:hover {
+  background-color: #6f76c8;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.person-card {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: card;
+}
+
+.person-card img {
+  width: 25%;
+  border: solid 2px #bdc1ff;
+  border-radius: 50%;
+  margin: 18px;
+}
+
+.person-card .info {
+  background-color: #5847eb;
+  border-radius: 18px;
+  padding: 18px;
+  z-index: 2;
+}
+
+.person-card .filters {
+  background-color: #1c1f4a;
+  border-radius: 0 0 18px 18px;
+  padding: 18px;
+  list-style: none;
+  z-index: 1;
+  -webkit-transform: translateY(-18px);
+          transform: translateY(-18px);
+}
+
+.person-card .filters li {
+  margin-bottom: 18px;
+}
+
+.person-card .filters a {
+  color: #bdc1ff;
+  text-decoration: none;
+}
+
+#work {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: work;
+  position: relative;
+}
+
+#work #work-shadow {
+  background-color: #ff8c66;
+}
+
+#work-shadow, #play-shadow, #social-shadow, #exercise-shadow, #care-shadow, #study-shadow {
+  width: 100%;
+  border-radius: 18px 18px 0 0;
+  position: absolute;
+  top: -3rem;
+  right: 0;
+  z-index: -1;
+}
+
+#work-shadow img, #play-shadow img, #social-shadow img, #exercise-shadow img, #care-shadow img, #study-shadow img {
+  margin-left: 75%;
+  opacity: 0.75;
+  padding: 5px;
+}
+
+#play {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: play;
+  position: relative;
+}
+
+#play #play-shadow {
+  background-color: #56c2e6;
+}
+
+#study {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  grid-area: study;
+  position: relative;
+}
+
+#study #study-shadow {
+  background-color: #ff5c7c;
+}
+
+#exercise {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: exercise;
+  position: relative;
+}
+
+#exercise #exercise-shadow {
+  background-color: #4acf81;
+}
+
+#social {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: social;
+  position: relative;
+}
+
+#social #social-shadow {
+  background-color: #7536d3;
+}
+
+#self-care {
+  -ms-grid-row: 2;
+  -ms-grid-column: 4;
+  grid-area: care;
+  position: relative;
+}
+
+#self-care #care-shadow {
+  background-color: #f1c65b;
+}
+
+.attribution {
+  position: absolute;
+  bottom: -5rem;
+  left: 10vw;
+  width: 100%;
+}
+
+@media screen and (max-width: 375px) {
+  main {
+    display: block;
+  }
+  .card {
+    margin-top: 5rem;
+  }
+  #work-shadow img, #play-shadow img, #social-shadow img, #exercise-shadow img, #care-shadow img, #study-shadow img {
+    margin-left: 70%;
+  }
+  .attribution {
+    bottom: -3rem;
+    left: 0;
+  }
+}
+/*# sourceMappingURL=style.css.map */
